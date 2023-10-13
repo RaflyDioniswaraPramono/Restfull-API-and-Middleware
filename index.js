@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import db from "./config/Database.js";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import morgan from "morgan";
 
 // import Movies from "./models/Movies.js";
 // import Users from "./models/Users.js";
@@ -13,6 +14,7 @@ const app = express();
 const port = process.env.PORT_DEV || 3001;
 
 app.use(express.json());
+app.use(morgan("tiny"));
 app.use(bodyParser.json());
 app.use(router);
 
@@ -41,7 +43,7 @@ app.use(
   swaggerUi.setup(specs, {
     explorer: true,
     customCssUrl:
-      "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.1/themes/3.x/theme-flattop.min.css"
+      "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.1/themes/3.x/theme-flattop.min.css",
   })
 );
 
