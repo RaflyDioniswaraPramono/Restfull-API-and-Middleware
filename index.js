@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import db from "./config/Database.js";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import morgan from "morgan";
+import morgan from "morgan"
 
 // import Movies from "./models/Movies.js";
 // import Users from "./models/Users.js";
