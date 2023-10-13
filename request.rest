@@ -1,0 +1,51 @@
+POST http://localhost:3001/api/v1/users
+content-type: application/json
+
+{
+  "id": 101,
+  "email": "raflypram368@gmail.com",
+  "gender": "Male",
+  "password": "rakamin123",
+  "role": "HRD"
+}
+
+###
+
+PUT http://localhost:3001/api/v1/users
+content-type: application/json
+
+{
+  "id": 101,
+  "email": "raflypram368@gmail.com",
+  "gender": "Male",
+  "password": "rakamin123",
+  "role": "Staff"
+}
+
+###
+DELETE http://localhost:3001/api/v1/users/101
+
+###
+POST http://localhost:3001/api/v1/movies
+content-type: application/json
+
+{
+  "id": 101,
+  "title": "2012",
+  "genres": "Armageddon",
+  "year": "2012"
+}
+
+###
+PUT http://localhost:3001/api/v1/movies
+content-type: application/json
+
+{
+  "id": 101,
+  "title": "2012 and 2020",
+  "genres": "Armageddon",
+  "year": "2012 and 2020"
+}
+
+###
+DELETE http://localhost:3001/api/v1/movies/101
